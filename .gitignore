@@ -1,0 +1,6 @@
+# Keep local files private unless they are explicitly listed here.
+*
+!/.gitignore
+!/README.md
+!/stapler_patch_experiment.py
+!/stapler_sample.png
