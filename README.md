@@ -8,7 +8,15 @@ In the photograph, a bright horizontal band roughly followed the stapler.
 In the noise images, high scores spread across much of the frame. All four
 maps use the same colour scale.
 
-## Run on Windows
+## Download for Windows
+
+[Download StaplerPatch.exe](https://github.com/polarvapourer/Vision-Patch-Experiment/releases/download/v1.0.0/StaplerPatch.exe) · [View release notes](https://github.com/polarvapourer/Vision-Patch-Experiment/releases/tag/v1.0.0)
+
+Double-click `StaplerPatch.exe` to run the experiment. The sample photo is
+included, and no Python installation is needed. The first launch requires
+internet access to download DINOv2-small if the model is not already cached.
+
+## Run from source on Windows
 
 I ran the experiment with Python 3.13 and CPU PyTorch. Open a terminal in
 the project folder and run:
