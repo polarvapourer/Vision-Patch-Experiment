@@ -15,6 +15,7 @@ from transformers import AutoImageProcessor, AutoModel
 # Look for the public sample image in the same folder as this program.
 PHOTO_PATH = Path(__file__).with_name("stapler_sample.png")
 MODEL_NAME = "facebook/dinov2-small"
+MODEL_REVISION = "ed25f3a31f01632728cabb09d1542f84ab7b0056"
 IMAGE_SIZE = 224
 
 # Counting from zero, this position falls on the blue body of the stapler.
@@ -96,8 +97,8 @@ def main():
 
     # Load the trained model once and reuse it for every image.
     print("Loading DINOv2-small...")
-    processor = AutoImageProcessor.from_pretrained(MODEL_NAME)
-    model = AutoModel.from_pretrained(MODEL_NAME)
+    processor = AutoImageProcessor.from_pretrained(MODEL_NAME, revision=MODEL_REVISION)
+    model = AutoModel.from_pretrained(MODEL_NAME, revision=MODEL_REVISION, use_safetensors=True)
     model.eval()
 
     similarity_maps = []
