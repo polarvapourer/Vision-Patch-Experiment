@@ -10,6 +10,8 @@ maps use the same colour scale.
 
 ## Download for Windows
 
+For the pinned model and processor, use the source instructions below. The v1.0.0 executable downloads from a moving model revision.
+
 [Download StaplerPatch.exe](https://github.com/polarvapourer/Vision-Patch-Experiment/releases/download/v1.0.0/StaplerPatch.exe) · [View release notes](https://github.com/polarvapourer/Vision-Patch-Experiment/releases/tag/v1.0.0)
 
 Double-click `StaplerPatch.exe` to run the experiment. The sample photo is
@@ -23,6 +25,7 @@ the project folder and run:
 
 ```powershell
 py -3.13 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --index-url https://pypi.org/simple "setuptools>=84.1.0"
 .\.venv\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 .\.venv\Scripts\python.exe -m pip install transformers pillow numpy matplotlib
 .\.venv\Scripts\python.exe .\stapler_patch_experiment.py
